@@ -27,7 +27,10 @@ namespace Ex04.Menus.Interfaces
             get { return r_OperationType; }
         }
 
-
+        public string Title
+        {
+            get { return m_Title; }
+        }
 
 
     }

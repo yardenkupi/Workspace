@@ -11,3 +11,4 @@ C:\Users\HP\Desktop\HW4\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.pd
 C:\Users\HP\Desktop\HW4\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\HP\Desktop\HW4\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
 C:\Users\HP\Desktop\HW4\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\HP\Desktop\HW4\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csprojAssemblyReference.cache
