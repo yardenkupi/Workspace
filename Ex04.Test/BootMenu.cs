@@ -15,11 +15,11 @@ namespace Ex04.Test
             Ex04.Menus.Interfaces.SubMenu subMenu1 = new Menus.Interfaces.SubMenu(interfaceMenu, "Show Date/Time");
             Ex04.Menus.Interfaces.SubMenu subMenu2 = new Menus.Interfaces.SubMenu(interfaceMenu, "Version and Digits");
 
-            Ex04.Menus.Interfaces.Operations subMenu1a = new Menus.Interfaces.Operations(interfaceMenu, "Show Time", new ShowDate());
-            Ex04.Menus.Interfaces.Operations subMenu1b = new Menus.Interfaces.Operations(interfaceMenu, "Show Date", new ShowDate());
+            Ex04.Menus.Interfaces.Operations subMenu1a = new Menus.Interfaces.Operations(subMenu1, "Show Time", new ShowDate());
+            Ex04.Menus.Interfaces.Operations subMenu1b = new Menus.Interfaces.Operations(subMenu1, "Show Date", new ShowDate());
 
-            Ex04.Menus.Interfaces.Operations subMenu2a = new Menus.Interfaces.Operations(interfaceMenu, "Count Digits", new CountingDigits());
-            Ex04.Menus.Interfaces.Operations subMenu2b = new Menus.Interfaces.Operations(interfaceMenu, "Display Version", new DisplayVersion());
+            Ex04.Menus.Interfaces.Operations subMenu2a = new Menus.Interfaces.Operations(subMenu2, "Count Digits", new CountingDigits());
+            Ex04.Menus.Interfaces.Operations subMenu2b = new Menus.Interfaces.Operations(subMenu2, "Display Version", new DisplayVersion());
 
             Ex04.Menus.Interfaces.Menu currentMenu = interfaceMenu; 
             while (currentMenu != null)

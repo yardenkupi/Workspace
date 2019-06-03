@@ -48,7 +48,7 @@ namespace Ex04.Menus.Interfaces
             menuOption.AppendFormat("=============={0}", Environment.NewLine);
             foreach(ISubItem currSubItem in m_SubItems)
             {
-                menuOption.AppendFormat("{0}{1}", currSubItem.ToString(), Environment.NewLine);
+                menuOption.AppendFormat("{0}{1}", currSubItem.Title, Environment.NewLine);
             }
             
             return menuOption.ToString();

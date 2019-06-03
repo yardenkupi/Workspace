@@ -16,7 +16,7 @@ namespace Ex04.Menus.Interfaces
         public override string ToString()
         {
             StringBuilder menuOption = new StringBuilder();
-            menuOption.AppendFormat("{0}{1}", this.MenuOptions(), Environment.NewLine);
+            menuOption.AppendFormat("{0}", this.MenuOptions());
             menuOption.AppendFormat("0. Exit{0}", Environment.NewLine);
             menuOption.AppendFormat("Please enter your choice(1-{0} or  0 to exit): {1}", m_SubItems.Count(), Environment.NewLine);
             menuOption.Append(">> ");

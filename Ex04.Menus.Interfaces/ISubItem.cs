@@ -2,6 +2,9 @@
 {
     public interface ISubItem
     {
-
+        string Title
+        {
+            get;
+        }
     }
 }
