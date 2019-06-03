@@ -8,12 +8,16 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Test
 {
-    public class ShowTime : IOperationType
+    public class ShowTime : Ex04.Menus.Interfaces.Operations
     {
-        void IOperationType.ApplyOperation()
+        public ShowTime(Menu i_Parent, string i_Title) : base(i_Parent, i_Title)
         {
-            Console.WriteLine(DateTime.Now.TimeOfDay);
-            Console.ReadLine();
+
+        }
+
+        public override void ApplyOperation()
+        {
+            Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
         }   
 
     }

@@ -9,22 +9,21 @@ namespace Ex04.Menus.Interfaces
 {
     public class Operations : ISubItem
     {
-        private readonly Menu r_Parent;
+        protected  Menu r_Parent;
         protected string m_Title;
-        private readonly IOperationType r_OperationType;
 
-        public Operations(Menu i_Parent, string i_Title, IOperationType i_OperationType)
+        public Operations(Menu i_Parent, string i_Title)
         {
             int index = 0;
             r_Parent = i_Parent;
             i_Parent.AddSubItem(this, out index);
             m_Title = index + ". " + i_Title;
-            r_OperationType = i_OperationType;
         }
 
-        public IOperationType Operation
+
+        public virtual void ApplyOperation()
         {
-            get { return r_OperationType; }
+
         }
 
         public string Title

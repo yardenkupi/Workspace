@@ -39,7 +39,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOperationType.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="ISubItem.cs" />

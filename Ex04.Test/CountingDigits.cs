@@ -7,9 +7,14 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Test
 {
-    class CountingDigits : IOperationType
+    class CountingDigits : Ex04.Menus.Interfaces.Operations
     {
-        void IOperationType.ApplyOperation()
+        public CountingDigits(Menu i_Parent, string i_Title) : base(i_Parent, i_Title)
+        {
+
+        }
+
+        public override void ApplyOperation()
         {
             CountDigits();
         }
@@ -28,7 +33,7 @@ namespace Ex04.Test
                 }
             }
 
-            Console.WriteLine(string.Format("You have {0} number of sigits in the inputted sentence.", numberOfDigits));
+            Console.WriteLine(string.Format("You have {0} number of digits in the inputted sentence.", numberOfDigits));
         }
         
     }
