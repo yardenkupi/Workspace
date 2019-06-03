@@ -67,7 +67,7 @@ namespace Ex04.Menus.Interfaces
         public void Operate(int i_Option)
         {
             Operations currOption = (Operations)m_SubItems.ElementAt(i_Option - 1);
-            currOption.Operation.ApplyOperation();
+            currOption.ApplyOperation();
         }
 
         public abstract Menu PrevMenu();

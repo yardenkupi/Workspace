@@ -15,19 +15,18 @@ namespace Ex04.Test
             Ex04.Menus.Interfaces.SubMenu subMenu1 = new Menus.Interfaces.SubMenu(interfaceMenu, "Show Date/Time");
             Ex04.Menus.Interfaces.SubMenu subMenu2 = new Menus.Interfaces.SubMenu(interfaceMenu, "Version and Digits");
 
-            Ex04.Menus.Interfaces.Operations subMenu1a = new Menus.Interfaces.Operations(subMenu1, "Show Time", new ShowDate());
-            Ex04.Menus.Interfaces.Operations subMenu1b = new Menus.Interfaces.Operations(subMenu1, "Show Date", new ShowDate());
+            ShowTime subMenu1a = new ShowTime(subMenu1, "Show Time");
+            ShowDate subMenu1b = new ShowDate(subMenu1, "Show Date");
+            DisplayVersion subMenu2a = new DisplayVersion(subMenu2, "Display Version");
+            CountingDigits subMenu2b = new CountingDigits(subMenu2, "Count Digits");
 
-            Ex04.Menus.Interfaces.Operations subMenu2a = new Menus.Interfaces.Operations(subMenu2, "Count Digits", new CountingDigits());
-            Ex04.Menus.Interfaces.Operations subMenu2b = new Menus.Interfaces.Operations(subMenu2, "Display Version", new DisplayVersion());
-
-            Ex04.Menus.Interfaces.Menu currentMenu = interfaceMenu; 
+            Ex04.Menus.Interfaces.Menu currentMenu = interfaceMenu;
+            int option = 0;
             while (currentMenu != null)
             {
                 Console.Clear();
-                Console.WriteLine(currentMenu.ToString());
+                Console.Write(currentMenu.ToString());
                 string input = Console.ReadLine();
-                int option = 0;
                 currentMenu.IsValidOption(input, out option);
                 if (option  == 0)
                 {
@@ -39,8 +38,10 @@ namespace Ex04.Test
                 }
                 else
                 {
+                    Console.Clear();
                     currentMenu.Operate(option);
-                    System.Threading.Thread.Sleep(3000);
+                    Console.Write("To go back press any key");
+                    Console.ReadLine();
                 }
             }
         }

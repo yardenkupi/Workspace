@@ -7,12 +7,16 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Test
 {
-    public class ShowDate : IOperationType
+    public class ShowDate : Ex04.Menus.Interfaces.Operations
     {
-        void IOperationType.ApplyOperation()
+        public ShowDate(Menu i_Parent, string i_Title) : base(i_Parent, i_Title)
+        {
+
+        }
+
+        public override void ApplyOperation()
         {
             Console.WriteLine(DateTime.Today.ToString("d"));
-            Console.ReadLine();
         }
     }
 }
